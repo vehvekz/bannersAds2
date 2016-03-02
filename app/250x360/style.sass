@@ -1,0 +1,324 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #fcb01e
+$duration: 11s
+// animation duration
+
+/********** Main Style **********/
+body
+	margin: 0
+	padding: 0
+
+*
+	box-sizing: border-box
+
+.banner
+	position: relative
+	display: block
+	width: 250px
+	height: 360px
+	overflow: hidden
+	-webkit-font-smoothing: antialiased
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	background-color: $white
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialised
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.wrapper
+	height: 100%
+	background: url("img/bg.jpg") no-repeat 50% 50%
+	font-family: 'Roboto Condensed', sans-serif
+	text-align: center
+	text-transform: uppercase
+
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-top: 32px
+	&_text1
+		font-size: 47px
+		letter-spacing: -3px
+		line-height: 47px
+		color: $accent
+	&_text2
+		font-size: 47px
+		letter-spacing: -3px
+		line-height: 47px
+		padding-top: 12px
+		color: $white
+
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 24px 20px 0
+	text-shadow: 4px 0 9px #030404
+	&_text1
+		position: relative
+		font-size: 30px
+		letter-spacing: -2px
+		line-height: 37px
+		color: $white
+		&:after
+			content: ''
+			position: absolute
+			bottom: -18px
+			left: 50%
+			margin-left: -34px
+			display: block
+			width: 68px
+			height: 7px
+			background-color: $accent
+			box-shadow: 4px -1px 16px #030404
+	&_text2
+		font-family: 'Roboto condenced', sans-serif
+		font-size: 25px
+		letter-spacing: -2.5px
+		line-height: 25px
+		color: $accent
+		padding-top: 36px
+	&_text3
+		font-size: 25px
+		letter-spacing: -2px
+		line-height: 32px
+		color: $accent
+		padding-top: 13px
+
+/********** Date **********/
+.deadline-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 28px 20px 0
+	text-shadow: 4px 0 9px #030404
+	.deadline
+		font-family: 'Roboto Condenced', sans-serif
+		font-size: 24px
+		letter-spacing: -2px
+		line-height: 34px
+		color: $accent
+	.date
+		font-size: 43px
+		line-height: 43px
+		letter-spacing: -3px
+		padding-top: 25px
+		color: $white
+	.button
+		display: inline-block
+		position: relative
+		width: 178px
+		height: 38px
+		margin-top: 16px
+		padding: 1px 15px 0 0
+		font-size: 19px
+		letter-spacing: -1px
+		line-height: 38px
+		border-radius: 30px
+		background-color: $accent
+		box-shadow: 4px -1px 16px #030404
+		text-shadow: none
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 11px
+			right: 7px
+			border: 8px solid transparent
+			border-left: 13px solid $black
+
+
+/********** Logos **********/
+.logos
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 47px
+	background-color: $white
+	text-align: left
+	padding: 6px 0 0 14px
+	img
+		display: inline-block
+		&.logo1
+			width: 84px
+		&.logo2
+			margin-left: 19px
+			width: 120px
+
+/********** Animation **********/
+@keyframes title1-1
+	0%
+		transform: translateX(-300px)
+	10%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	30%
+		transform: translateX(300px)
+	100%
+		transform: translateX(300px)
+@keyframes title1-2
+	0%
+		transform: translateX(300px)
+	10%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	30%
+		transform: translateX(-300px)
+	100%
+		transform: translateX(-300px)
+.title1_text1
+	animation: title1-1 $duration ease infinite
+.title1_text2
+	animation: title1-2 $duration ease infinite
+
+@keyframes title2-1
+	0%
+		transform: translateX(350px)
+	20%
+		transform: translateX(350px)
+	30%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(350px)
+	100%
+		transform: translateX(350px)
+@keyframes title2-2
+	0%
+		transform: translateX(-350px)
+	20%
+		transform: translateX(-350px)
+	30%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(-350px)
+	100%
+		transform: translateX(-360px)
+@keyframes title2-3
+	0%
+		transform: translateY(300px)
+	20%
+		transform: translateY(300px)
+	30%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(300px)
+	100%
+		transform: translateY(300px)
+.title2_text1
+	animation: title2-1 $duration ease infinite
+.title2_text2
+	animation: title2-2 $duration ease infinite
+.title2_text3
+	animation: title2-3 $duration ease infinite
+
+@keyframes deadline
+	0%
+		transform: translateY(-100px)
+	50%
+		transform: translateY(-100px)
+	60%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(-100px)
+.deadline
+	animation: deadline $duration ease infinite
+
+@keyframes date
+	0%
+		transform: translateX(300px)
+	55%
+		transform: translateX(300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(-300px)
+.date
+	animation: date $duration ease infinite
+
+@keyframes button
+	0%
+		transform: translateX(-300px)
+	55%
+		transform: translateX(-300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(300px)
+.button
+	animation: button $duration ease infinite
+
+@keyframes logos
+	0%
+		transform: translateY(300px)
+	60%
+		transform: translateY(300px)
+	70%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(300px)
+.logos
+	animation: logos $duration ease infinite
+
+@keyframes bg
+	0%
+		background-position-y: 50%
+		background-size: 128%
+	20%
+		background-position-y: 50%
+		background-size: 128%
+	30%
+		background-size: 179%
+		background-position-y: 0
+	50%
+		background-size: 179%
+		background-position-y: 0
+	60%
+		background-size: 179%
+		background-position-y: 10%
+	90%
+		background-size: 179%
+		background-position-y: 10%
+	100%
+		background-position-y: 50%
+		background-size: 128%
+.wrapper
+	animation: bg $duration ease infinite
+
+
+
+
+
+
+
