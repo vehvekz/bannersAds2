@@ -1,0 +1,352 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #fcb01e
+$duration: 11s
+$width: 336px
+$height: 280px
+
+/********** Main Style **********/
+body
+	margin: 0
+	padding: 0
+*
+	box-sizing: border-box
+
+.banner
+	position: relative
+	display: block
+	width: $width
+	height: $height
+	overflow: hidden
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	background-color: $white
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialiased
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.wrapper
+	height: 100%
+	background: url("img/bg.jpg") no-repeat 50% 50%
+	font-family: 'Roboto Condensed', sans-serif
+	text-align: center
+	text-transform: uppercase
+
+.world
+	background: url("img/world.png") no-repeat 34% 201%
+	background-size: 86%
+	-webkit-background-size: 86%
+	width: $width
+	height: $width
+
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-top: 24px
+	text-align: center
+	&_text1-wrap
+		display: inline-block
+		font-size: 46px
+		letter-spacing: -3px
+		line-height: 46px
+		color: $accent
+	&_text1
+		position: relative
+		display: table-cell
+		&:after, &:before
+			content: ''
+			position: absolute
+			bottom: -19px
+			width: 0%
+			height: 5px
+			background-color: $accent
+		&:after
+			right: 0
+		&:before
+			left: 0
+		span
+			color: $white
+
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 26px 4px 0
+	text-shadow: 4px 0 9px #030404
+	&_text1
+		position: relative
+		font-size: 27px
+		letter-spacing: -2px
+		line-height: 27px
+		color: $white
+		&:after
+			content: ''
+			position: absolute
+			bottom: -20px
+			left: 50%
+			margin-left: -34px
+			display: block
+			width: 68px
+			height: 5px
+			background-color: $accent
+			box-shadow: 4px -1px 16px #030404
+	&_text2
+		font-family: 'Roboto condenced', sans-serif
+		font-size: 27px
+		letter-spacing: -2.5px
+		line-height: 27px
+		color: $accent
+		padding-top: 40px
+	&_text3
+		font-size: 27px
+		letter-spacing: -2px
+		line-height: 35px
+		color: $accent
+		padding-top: 10px
+
+/********** Date **********/
+.deadline-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 28px 5px 0
+	text-shadow: 4px 0 9px #030404
+	.deadline
+		position: relative
+		font-family: 'Roboto Condenced', sans-serif
+		font-size: 23px
+		letter-spacing: -2px
+		line-height: 24px
+		color: $accent
+		&:after
+			content: ''
+			position: absolute
+			bottom: -27px
+			left: 50%
+			margin-left: -49px
+			display: block
+			width: 98px
+			height: 6px
+			background-color: $accent
+			box-shadow: 4px -1px 16px #030404
+	.date
+		font-size: 42px
+		line-height: 42px
+		letter-spacing: -3px
+		padding-top: 47px
+		color: $white
+	.button
+		display: inline-block
+		position: relative
+		width: 206px
+		height: 45px
+		margin-top: 11px
+		padding: 1px 15px 0 0
+		font-size: 23px
+		letter-spacing: -1px
+		line-height: 45px
+		border-radius: 30px
+		background-color: $accent
+		box-shadow: 4px -1px 16px #030404
+		text-shadow: none
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 14px
+			right: 12px
+			border: 8px solid transparent
+			border-left: 13px solid $black
+
+
+/********** Logos **********/
+.logos
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 218px
+	height: 41px
+	background-color: $white
+	text-align: left
+	padding: 5px 0 0 9px
+	img
+		display: inline-block
+		&.logo1
+			width: 77px
+		&.logo2
+			margin-left: 15px
+			width: 103px
+
+/********** Animation **********/
+@keyframes title1-1
+	0%
+		transform: translateX(-350px)
+	7%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	27%
+		transform: translateX(350px)
+	100%
+		transform: translateX(350px)
+
+@keyframes line
+	5%
+		width: 0%
+	9%
+		width: 50%
+	100%
+		width: 50%
+
+.title1_text1
+	animation: title1-1 $duration ease infinite
+	animation-fill-mode: both
+.title1_text1:after, .title1_text1:before
+	animation: line $duration ease infinite
+
+@keyframes title2-1
+	0%
+		transform: translateX(350px)
+	22%
+		transform: translateX(350px)
+	32%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(350px)
+	100%
+		transform: translateX(350px)
+@keyframes title2-2
+	0%
+		transform: translateX(-350px)
+	22%
+		transform: translateX(-350px)
+	32%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(-350px)
+	100%
+		transform: translateX(-360px)
+@keyframes title2-3
+	0%
+		transform: translateY(300px)
+	22%
+		transform: translateY(300px)
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(300px)
+	100%
+		transform: translateY(300px)
+.title2_text1
+	animation: title2-1 $duration ease infinite
+.title2_text2
+	animation: title2-2 $duration ease infinite
+.title2_text3
+	animation: title2-3 $duration ease infinite
+
+@keyframes deadline
+	0%
+		transform: translateY(-100px)
+	50%
+		transform: translateY(-100px)
+	60%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(-100px)
+.deadline
+	animation: deadline $duration ease infinite
+
+@keyframes date
+	0%
+		transform: translateX(300px)
+	55%
+		transform: translateX(300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(-300px)
+.date
+	animation: date $duration ease infinite
+
+@keyframes button
+	0%
+		transform: translateX(-300px)
+	55%
+		transform: translateX(-300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(300px)
+.button
+	animation: button $duration ease infinite
+
+@keyframes logos
+	0%
+		transform: translateY(300px)
+	60%
+		transform: translateY(300px)
+	70%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(300px)
+.logos
+	animation: logos $duration ease infinite
+
+@keyframes world
+	0%
+		transform: translateY(0)
+		background-size: 84%
+		-webkit-background-size: 84%
+	20%
+		transform: translateY(0)
+		background-size: 84%
+		-webkit-background-size: 84%
+	30%
+		transform: translateY(191px)
+		background-size: 100%
+		-webkit-background-size: 100%
+	90%
+		transform: translateY(191px)
+		background-size: 100%
+		-webkit-background-size: 100%
+	100%
+		transform: translateY(0)
+		background-size: 84%
+		-webkit-background-size: 84%
+.world
+	animation: world $duration ease infinite
+
+
+
+
+
+
+
