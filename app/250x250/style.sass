@@ -3,7 +3,7 @@ $black: #000
 $white: #fff
 $accent: #fcb01e
 $duration: 11s
-$width: 300px
+$width: 250px
 $height: 250px
 
 /********** Main Style **********/
@@ -41,11 +41,11 @@ body
 	text-transform: uppercase
 
 .world
-	background: url("img/world.png") no-repeat 47% 76%
-	background-size: 60%
-	-webkit-background-size: 60%
-	width: 300px
-	height: 300px
+	background: url("img/world.png") no-repeat 47% 94%
+	background-size: 64%
+	-webkit-background-size: 64%
+	width: $width
+	height: $height
 
 .title1
 	position: absolute
@@ -57,7 +57,7 @@ body
 	text-align: center
 	&_text1-wrap
 		display: inline-block
-		font-size: 40px
+		font-size: 37px
 		letter-spacing: -3px
 		line-height: 40px
 		color: $accent
@@ -84,32 +84,41 @@ body
 	bottom: 0
 	left: 0
 	right: 0
-	padding: 26px 7px 0
 	text-shadow: 4px 0 9px #030404
 	&_text1
 		position: relative
-		font-size: 24px
-		letter-spacing: -2px
-		line-height: 25px
-		color: $white
+		font-size: 40px
+		letter-spacing: -3px
+		line-height: 40px
+		color: $accent
+		padding-top: 26px
+		span
+			color: $white
+			font-size: 33px
+			line-height: 52px
 		&:after
 			content: ''
 			position: absolute
-			bottom: -18px
+			bottom: -15px
 			left: 50%
-			margin-left: -29px
+			margin-left: -37px
 			display: block
-			width: 58px
-			height: 5px
+			width: 74px
+			height: 7px
 			background-color: $accent
 			box-shadow: 4px -1px 16px #030404
 	&_text2
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
 		font-family: 'Roboto condenced', sans-serif
 		font-size: 23px
 		letter-spacing: -2.5px
 		line-height: 15px
 		color: $accent
-		padding-top: 36px
+		padding-top: 23px
 	&_text3
 		font-size: 25px
 		letter-spacing: -2px
@@ -124,42 +133,42 @@ body
 	bottom: 0
 	left: 0
 	right: 0
-	padding: 24px 5px 0
+	padding: 20px 0 0
 	text-shadow: 4px 0 9px #030404
 	.deadline
 		position: relative
 		font-family: 'Roboto Condenced', sans-serif
-		font-size: 20px
+		font-size: 18px
 		letter-spacing: -2px
-		line-height: 20px
+		line-height: 18px
 		color: $accent
 		&:after
 			content: ''
 			position: absolute
-			bottom: -23px
+			bottom: -20px
 			left: 50%
-			margin-left: -44px
+			margin-left: -36px
 			display: block
-			width: 88px
+			width: 72px
 			height: 5px
 			background-color: $accent
 			box-shadow: 4px -1px 16px #030404
 	.date
-		font-size: 38px
-		line-height: 38px
+		font-size: 31px
+		line-height: 31px
 		letter-spacing: -3px
-		padding-top: 40px
+		padding-top: 33px
 		color: $white
 	.button
 		display: inline-block
 		position: relative
-		width: 184px
-		height: 38px
-		margin-top: 11px
+		width: 152px
+		height: 34px
+		margin-top: 7px
 		padding: 1px 15px 0 0
-		font-size: 20px
+		font-size: 17px
 		letter-spacing: -1px
-		line-height: 38px
+		line-height: 34px
 		border-radius: 30px
 		background-color: $accent
 		box-shadow: 4px -1px 16px #030404
@@ -168,9 +177,9 @@ body
 			content: ''
 			display: block
 			position: absolute
-			top: 11px
-			right: 7px
-			border: 8px solid transparent
+			top: 10px
+			right: 6px
+			border: 7px solid transparent
 			border-left: 13px solid $black
 
 
@@ -180,7 +189,7 @@ body
 	bottom: 0
 	left: 0
 	width: 182px
-	height: 35px
+	height: 34px
 	background-color: $white
 	text-align: left
 	padding: 6px 0 0 9px
@@ -221,56 +230,41 @@ body
 
 @keyframes title2-1
 	0%
-		transform: translateX(350px)
-	22%
-		transform: translateX(350px)
-	32%
+		transform: translateY(-350px)
+	20%
+		transform: translateY(-350px)
+	28%
 		transform: translateX(0)
-	50%
+	37%
 		transform: translateX(0)
-	60%
-		transform: translateX(350px)
+	45%
+		transform: translateY(-350px)
 	100%
-		transform: translateX(350px)
+		transform: translateY(-350px)
 @keyframes title2-2
 	0%
 		transform: translateX(-350px)
-	22%
+	37%
 		transform: translateX(-350px)
-	32%
-		transform: translateX(0)
-	50%
+	45%
 		transform: translateX(0)
 	60%
+		transform: translateX(0)
+	68%
 		transform: translateX(-350px)
 	100%
-		transform: translateX(-360px)
-@keyframes title2-3
-	0%
-		transform: translateY(300px)
-	22%
-		transform: translateY(300px)
-	32%
-		transform: translateY(0)
-	50%
-		transform: translateY(0)
-	60%
-		transform: translateY(300px)
-	100%
-		transform: translateY(300px)
+		transform: translateX(-350px)
 .title2_text1
 	animation: title2-1 $duration ease infinite
 .title2_text2
 	animation: title2-2 $duration ease infinite
-.title2_text3
-	animation: title2-3 $duration ease infinite
 
 @keyframes deadline
 	0%
 		transform: translateY(-100px)
-	50%
-		transform: translateY(-100px)
 	60%
+		transform: translateY(-100px)
+	70%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
@@ -282,9 +276,9 @@ body
 @keyframes date
 	0%
 		transform: translateX(300px)
-	55%
+	60%
 		transform: translateX(300px)
-	65%
+	70%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
@@ -296,9 +290,9 @@ body
 @keyframes button
 	0%
 		transform: translateX(-300px)
-	55%
+	60%
 		transform: translateX(-300px)
-	65%
+	70%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
@@ -310,9 +304,9 @@ body
 @keyframes logos
 	0%
 		transform: translateY(300px)
-	60%
+	65%
 		transform: translateY(300px)
-	70%
+	75%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
@@ -324,24 +318,24 @@ body
 @keyframes world
 	0%
 		transform: translateY(0)
-		background-size: 60%
-		-webkit-background-size: 60%
+		background-size: 64%
+		-webkit-background-size: 64%
 	20%
 		transform: translateY(0)
-		background-size: 60%
-		-webkit-background-size: 60%
+		background-size: 64%
+		-webkit-background-size: 64%
 	30%
-		transform: translateY(166px)
+		transform: translateY(151px)
 		background-size: 100%
 		-webkit-background-size: 100%
 	90%
-		transform: translateY(166px)
+		transform: translateY(151px)
 		background-size: 100%
 		-webkit-background-size: 100%
 	100%
 		transform: translateY(0)
-		background-size: 60%
-		-webkit-background-size: 60%
+		background-size: 64%
+		-webkit-background-size: 64%
 .world
 	animation: world $duration ease infinite
 
