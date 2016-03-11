@@ -24,7 +24,7 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/336x280/"
+		baseDir: "dist/300x1050/"
 	},
 	tunnel: false,
 	host: 'localhost',
