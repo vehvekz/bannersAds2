@@ -1,0 +1,362 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #fcb01e
+$duration: 11s
+$width: 120px
+$height: 600px
+
+/********** Main Style **********/
+body
+	margin: 0
+	padding: 0
+
+*
+	box-sizing: border-box
+
+.banner
+	position: relative
+	display: block
+	width: $width
+	height: $height
+	overflow: hidden
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	background-color: $white
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialiased
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.wrapper
+	height: 100%
+	background: #0a193a url("img/bg.jpg") no-repeat center 44px
+	font-family: 'Roboto Condensed', sans-serif
+	text-align: center
+	text-transform: uppercase
+
+.world
+	position: absolute
+	bottom: 144px
+	left: -19px
+	right: 0
+	width: 160px
+	height: 160px
+	background: url("img/world.png") no-repeat center
+	background-size: 100%
+	transform: scale(1)
+
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-top: 51px
+	text-align: center
+	text-shadow: 4px 0 9px #030404
+	&_text1-wrap
+		display: inline-block
+		font-size: 29px
+		letter-spacing: -3px
+		line-height: 29px
+		color: $accent
+	&_text1
+		position: relative
+		display: table-cell
+		&:after, &:before
+			content: ''
+			position: absolute
+			bottom: -15px
+			width: 0%
+			height: 4px
+			background-color: $accent
+			box-shadow: 11px -1px 16px #030404
+		&:after
+			right: 0
+		&:before
+			left: 0
+	&_text2
+		font-size: 33px
+		letter-spacing: -3px
+		line-height: 33px
+		padding-top: 24px
+		color: $white
+
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 44px 0 0
+	text-shadow: 4px 0 9px #030404
+	&_text1
+		position: relative
+		font-size: 23px
+		letter-spacing: -2px
+		line-height: 32px
+		color: $white
+		&:after
+			content: ''
+			position: absolute
+			bottom: -17px
+			left: 50%
+			margin-left: -55px
+			display: block
+			width: 110px
+			height: 5px
+			background-color: $accent
+			box-shadow: 4px -1px 16px #030404
+	&_text2
+		font-family: 'Roboto condenced', sans-serif
+		font-size: 20px
+		letter-spacing: -3px
+		line-height: 29px
+		color: $accent
+		padding-top: 36px
+	&_text3
+		font-size: 18px
+		letter-spacing: -2px
+		line-height: 30px
+		color: $accent
+		padding-top: 11px
+
+/********** Date **********/
+.deadline-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 48px 0 0
+	text-shadow: 4px 0 9px #030404
+	.deadline
+		font-family: 'Roboto Condenced', sans-serif
+		font-size: 19px
+		letter-spacing: -2px
+		line-height: 30px
+		color: $accent
+	.date
+		font-size: 39px
+		line-height: 39px
+		letter-spacing: -3px
+		padding-top: 65px
+		color: $white
+	.button
+		display: inline-block
+		position: relative
+		width: 110px
+		height: 24px
+		margin-top: 28px
+		padding: 1px 0 0 14px
+		font-size: 12px
+		letter-spacing: -1px
+		line-height: 24px
+		text-align: left
+		border-radius: 16px
+		background-color: $accent
+		box-shadow: 4px -1px 16px #030404
+		text-shadow: none
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 7px
+			right: 4px
+			border: 5px solid transparent
+			border-left: 11px solid $black
+
+
+/********** Logos **********/
+.logos
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 76px
+	background-color: $white
+	text-align: left
+	padding: 7px 0 0 3px
+	img
+		display: block
+		&.logo1
+			width: 78px
+		&.logo2
+			width: 106px
+			margin-top: 7px
+			margin-left: 5px
+
+/********** Animation **********/
+@keyframes title1-1
+	0%
+		transform: translateX(-300px)
+	7%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	30%
+		transform: translateX(300px)
+	100%
+		transform: translateX(300px)
+@keyframes title1-2
+	0%
+		transform: translateX(300px)
+	7%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	30%
+		transform: translateX(-300px)
+	100%
+		transform: translateX(-300px)
+@keyframes line
+	5%
+		width: 0%
+	10%
+		width: 50%
+	100%
+		width: 50%
+
+.title1_text1
+	animation: title1-1 $duration ease infinite
+	animation-fill-mode: both
+.title1_text2
+	animation: title1-2 $duration ease infinite
+.title1_text1:after, .title1_text1:before
+	animation: line $duration ease infinite
+
+@keyframes title2-1
+	0%
+		transform: translateY(-350px)
+	22%
+		transform: translateY(-350px)
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(-350px)
+	100%
+		transform: translateY(-350px)
+@keyframes title2-2
+	0%
+		transform: translateX(-350px)
+	22%
+		transform: translateX(-350px)
+	32%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(-350px)
+	100%
+		transform: translateX(-360px)
+@keyframes title2-3
+	0%
+		transform: translateX(300px)
+	22%
+		transform: translateX(300px)
+	32%
+		transform: translateX(0)
+	50%
+		transform: translateX(0)
+	60%
+		transform: translateX(300px)
+	100%
+		transform: translateX(300px)
+.title2_text1
+	animation: title2-1 $duration ease infinite
+.title2_text2
+	animation: title2-2 $duration ease infinite
+.title2_text3
+	animation: title2-3 $duration ease infinite
+
+@keyframes deadline
+	0%
+		transform: translateY(-200px)
+	50%
+		transform: translateY(-200px)
+	60%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(-200px)
+
+@keyframes date
+	0%
+		transform: translateX(300px)
+	55%
+		transform: translateX(300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(-300px)
+
+@keyframes button
+	0%
+		transform: translateX(-300px)
+	55%
+		transform: translateX(-300px)
+	65%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateX(300px)
+
+.deadline
+	animation: deadline $duration ease infinite
+.date
+	animation: date $duration ease infinite
+.button
+	animation: button $duration ease infinite
+
+@keyframes world
+	0%
+		bottom: 144px
+		transform: scale(1)
+	20%
+		bottom: 144px
+		transform: scale(1)
+	30%
+		bottom: 30px
+		transform: scale(1.3)
+	90%
+		bottom: 30px
+		transform: scale(1.3)
+	100%
+		bottom: 144px
+		transform: scale(1)
+.world
+	animation: world $duration ease infinite
+
+@keyframes bg
+	0%
+		background-position: center 44px
+	20%
+		background-position: center 44px
+	30%
+		background-position: center 0px
+	90%
+		background-position: center 0px
+	100%
+		background-position: center 44px
+.wrapper
+	animation: bg $duration ease infinite
+
+
+
+
+
+
+
+
