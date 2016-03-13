@@ -1,0 +1,301 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #fcb01e
+$duration: 11s
+$width: 980px
+$height: 120px
+
+/********** Main Style **********/
+body
+	margin: 0
+	padding: 0
+*
+	box-sizing: border-box
+
+.banner
+	position: relative
+	display: block
+	width: $width
+	height: $height
+	overflow: hidden
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	background-color: $white
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialiased
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.wrapper
+	height: 100%
+	background: url("img/bg.jpg") no-repeat 50% 50%
+	font-family: 'Roboto Condensed', sans-serif
+	text-align: left
+	text-transform: uppercase
+
+.world-wrap
+	width: 540px
+	height: 540px
+	position: absolute
+	top: -202px
+	right: -125px
+.world
+	background: url("img/world.png") no-repeat center
+	width: 100%
+	height: 100%
+
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 32px 0 0 33px
+	text-align: left
+	font-size: 62px
+	letter-spacing: -5px
+	line-height: 62px
+	color: $accent
+	span
+		color: $white
+
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 26px 0 0 18px
+	text-shadow: 4px 0 9px #030404
+	&_text1
+		position: relative
+		font-size: 37px
+		letter-spacing: -3px
+		line-height: 37px
+		color: $white
+	&_text2
+		font-family: 'Roboto', sans-serif
+		font-size: 22px
+		letter-spacing: -2px
+		line-height: 33px
+		color: $accent
+		padding-top: 5px
+
+/********** Date **********/
+.deadline-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 16px 0 0 25px
+	text-shadow: 4px 0 9px #030404
+	text-align: left
+	.deadline
+		position: relative
+		font-family: 'Roboto Condenced', sans-serif
+		font-size: 36px
+		letter-spacing: -4px
+		line-height: 39px
+		color: $accent
+	.date
+		display: inline-block
+		font-size: 51px
+		line-height: 55px
+		letter-spacing: -4px
+		padding: 5px 0 0 5px
+		color: $white
+	.button
+		display: inline-block
+		vertical-align: bottom
+		position: relative
+		width: 194px
+		height: 42px
+		margin: 0 0 7px 37px
+		padding: 2px 15px 0 22px
+		font-size: 23px
+		letter-spacing: -2px
+		line-height: 42px
+		border-radius: 19px
+		background-color: $accent
+		box-shadow: 4px -1px 16px #030404
+		text-shadow: none
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 13px
+			right: 7px
+			border: 8px solid transparent
+			border-left: 16px solid $black
+
+
+/********** Logos **********/
+.logos
+	position: absolute
+	bottom: 0
+	right: 0
+	width: 230px
+	height: 48px
+	background-color: $white
+	text-align: left
+	padding: 10px 0 0 9px
+	img
+		display: inline-block
+		&.logo1
+			width: 85px
+		&.logo2
+			margin-left: 13px
+			width: 116px
+
+/********** Animation **********/
+@keyframes title1
+	0%
+		transform: translateX(-500px)
+	10%
+		transform: translateX(0)
+	20%
+		transform: translateX(0)
+	32%
+		transform: translateX(-500px)
+	100%
+		transform: translateX(-500px)
+.title1
+	animation: title1 $duration ease infinite
+	animation-fill-mode: both
+
+@keyframes title2-1
+	0%
+		transform: translateY(-350px)
+	22%
+		transform: translateY(-350px)
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(-350px)
+	100%
+		transform: translateY(-350px)
+@keyframes title2-2
+	0%
+		transform: translateY(350px)
+	22%
+		transform: translateY(350px)
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(350px)
+	100%
+		transform: translateY(350px)
+.title2_text1
+	animation: title2-1 $duration ease infinite
+.title2_text2
+	animation: title2-2 $duration ease infinite
+
+@keyframes deadline
+	0%
+		transform: translateY(-300px)
+	50%
+		transform: translateY(-300px)
+	58%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(-300px)
+@keyframes date
+	0%
+		transform: translateX(-400px)
+	52%
+		transform: translateX(-400px)
+	60%
+		transform: translateX(0)
+	90%
+		transform: translateX(0)
+	100%
+		transform: translateX(-400px)
+@keyframes button
+	0%
+		transform: translateY(300px)
+	50%
+		transform: translateY(300px)
+	60%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(300px)
+
+.deadline
+	animation: deadline $duration ease infinite
+.date
+	animation: date $duration ease infinite
+.button
+	animation: button $duration ease infinite
+
+@keyframes logos
+	0%
+		transform: translateY(300px)
+	22%
+		transform: translateY(300px)
+	32%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(300px)
+.logos
+	animation: logos $duration ease infinite
+
+@keyframes world
+	0%
+		transform: scale(0.45)
+		top: -202px
+		right: -125px
+	20%
+		transform: scale(0.45)
+		top: -202px
+		right: -125px
+	30%
+		transform: scale(1.25)
+		top: -150px
+		right: -167px
+	90%
+		transform: scale(1.25)
+		top: -150px
+		right: -167px
+	100%
+		transform: scale(0.45)
+		top: -202px
+		right: -125px
+@keyframes worldRotate
+	0%
+		transform: rotate(0deg)
+	20%
+		transform: rotate(0deg)
+	30%
+		transform: rotate(-55deg)
+	90%
+		transform: rotate(-55deg)
+	100%
+		transform: rotate(0deg)
+.world-wrap
+	animation: world $duration ease infinite
+.world
+	animation: worldRotate $duration ease infinite
+
+
+
+
+
+
+
