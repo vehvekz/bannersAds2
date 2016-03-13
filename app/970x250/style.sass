@@ -3,14 +3,13 @@ $black: #000
 $white: #fff
 $accent: #fcb01e
 $duration: 11s
-$width: 250px
+$width: 970px
 $height: 250px
 
 /********** Main Style **********/
 body
 	margin: 0
 	padding: 0
-
 *
 	box-sizing: border-box
 
@@ -37,15 +36,20 @@ body
 	height: 100%
 	background: url("img/bg.jpg") no-repeat 50% 50%
 	font-family: 'Roboto Condensed', sans-serif
-	text-align: center
+	text-align: left
 	text-transform: uppercase
+	text-align: center
 
+.world-wrap
+	width: 540px
+	height: 540px
+	position: absolute
+	top: -137px
+	right: -51px
 .world
-	background: url("img/world.png") no-repeat 47% 94%
-	background-size: 64%
-	-webkit-background-size: 64%
-	width: $width
-	height: $height
+	background: url("img/world.png") no-repeat center
+	width: 100%
+	height: 100%
 
 .title1
 	position: absolute
@@ -53,13 +57,13 @@ body
 	bottom: 0
 	left: 0
 	right: 0
-	padding-top: 24px
-	text-align: center
+	padding: 78px 0 0 41px
+	text-align: left
 	&_text1-wrap
 		display: inline-block
-		font-size: 37px
-		letter-spacing: -3px
-		line-height: 40px
+		font-size: 67px
+		letter-spacing: -5px
+		line-height: 67px
 		color: $accent
 	&_text1
 		position: relative
@@ -67,9 +71,9 @@ body
 		&:after, &:before
 			content: ''
 			position: absolute
-			bottom: -14px
+			bottom: -24px
 			width: 0%
-			height: 4px
+			height: 9px
 			background-color: $accent
 		&:after
 			right: 0
@@ -84,47 +88,38 @@ body
 	bottom: 0
 	left: 0
 	right: 0
+	padding: 26px 410px 0 40px
 	text-shadow: 4px 0 9px #030404
 	&_text1
 		position: relative
-		font-size: 40px
+		font-size: 41px
 		letter-spacing: -3px
-		line-height: 40px
-		color: $accent
-		padding-top: 26px
-		span
-			color: $white
-			font-size: 33px
-			line-height: 52px
+		line-height: 43px
+		color: $white
 		&:after
 			content: ''
 			position: absolute
-			bottom: -15px
+			bottom: -20px
 			left: 50%
-			margin-left: -37px
+			margin-left: -74px
 			display: block
-			width: 74px
-			height: 7px
+			width: 148px
+			height: 8px
 			background-color: $accent
 			box-shadow: 4px -1px 16px #030404
 	&_text2
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
 		font-family: 'Roboto condenced', sans-serif
-		font-size: 23px
-		letter-spacing: -2.5px
-		line-height: 15px
+		font-size: 30px
+		letter-spacing: -3px
+		line-height: 33px
 		color: $accent
-		padding-top: 23px
+		padding-top: 40px
 	&_text3
-		font-size: 25px
-		letter-spacing: -2px
-		line-height: 30px
+		font-size: 36px
+		letter-spacing: -2.5px
+		line-height: 38px
 		color: $accent
-		padding-top: 13px
+		padding-top: 10px
 
 /********** Date **********/
 .deadline-wrap
@@ -133,43 +128,33 @@ body
 	bottom: 0
 	left: 0
 	right: 0
-	padding: 20px 0 0
+	padding: 40px 0 0 44px
 	text-shadow: 4px 0 9px #030404
+	text-align: left
 	.deadline
 		position: relative
 		font-family: 'Roboto Condenced', sans-serif
-		font-size: 18px
-		letter-spacing: -2px
-		line-height: 18px
+		font-size: 39px
+		letter-spacing: -4px
+		line-height: 39px
 		color: $accent
-		&:after
-			content: ''
-			position: absolute
-			bottom: -20px
-			left: 50%
-			margin-left: -36px
-			display: block
-			width: 72px
-			height: 5px
-			background-color: $accent
-			box-shadow: 4px -1px 16px #030404
 	.date
-		font-size: 31px
-		line-height: 31px
-		letter-spacing: -3px
-		padding-top: 33px
+		font-size: 55px
+		line-height: 51px
+		letter-spacing: -4px
+		padding-top: 19px
 		color: $white
 	.button
 		display: inline-block
 		position: relative
-		width: 152px
-		height: 34px
-		margin-top: 7px
-		padding: 1px 15px 0 0
-		font-size: 17px
-		letter-spacing: -1px
-		line-height: 34px
-		border-radius: 30px
+		width: 246px
+		height: 54px
+		margin-top: 15px
+		padding: 1px 15px 0 26px
+		font-size: 28px
+		letter-spacing: -2px
+		line-height: 54px
+		border-radius: 19px
 		background-color: $accent
 		box-shadow: 4px -1px 16px #030404
 		text-shadow: none
@@ -177,47 +162,47 @@ body
 			content: ''
 			display: block
 			position: absolute
-			top: 10px
-			right: 6px
-			border: 7px solid transparent
-			border-left: 13px solid $black
+			top: 16px
+			right: 9px
+			border: 11px solid transparent
+			border-left: 21px solid $black
 
 
 /********** Logos **********/
 .logos
 	position: absolute
 	bottom: 0
-	left: 0
-	width: 182px
-	height: 34px
+	right: 0
+	width: 246px
+	height: 43px
 	background-color: $white
 	text-align: left
-	padding: 6px 0 0 9px
+	padding: 5px 0 0 9px
 	img
 		display: inline-block
 		&.logo1
-			width: 61px
+			width: 91px
 		&.logo2
-			margin-left: 13px
-			width: 94px
+			margin-left: 16px
+			width: 127px
 
 /********** Animation **********/
 @keyframes title1-1
 	0%
-		transform: translateX(-300px)
+		transform: translateX(-600px)
 	7%
 		transform: translateX(0)
 	20%
 		transform: translateX(0)
 	27%
-		transform: translateX(300px)
+		transform: translateX(-600px)
 	100%
-		transform: translateX(300px)
+		transform: translateX(-600px)
 
 @keyframes line
-	5%
+	4%
 		width: 0%
-	9%
+	8%
 		width: 50%
 	100%
 		width: 50%
@@ -231,82 +216,98 @@ body
 @keyframes title2-1
 	0%
 		transform: translateY(-350px)
-	20%
+	22%
 		transform: translateY(-350px)
-	28%
-		transform: translateX(0)
-	37%
-		transform: translateX(0)
-	45%
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
 		transform: translateY(-350px)
 	100%
 		transform: translateY(-350px)
 @keyframes title2-2
 	0%
-		transform: translateX(-350px)
-	37%
-		transform: translateX(-350px)
-	45%
+		transform: translateX(-500px)
+	22%
+		transform: translateX(-500px)
+	32%
+		transform: translateX(0)
+	50%
 		transform: translateX(0)
 	60%
-		transform: translateX(0)
-	68%
-		transform: translateX(-350px)
+		transform: translateX(-500px)
 	100%
-		transform: translateX(-350px)
+		transform: translateX(-500px)
+@keyframes title2-3
+	0%
+		transform: translateY(300px)
+	22%
+		transform: translateY(300px)
+	32%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	60%
+		transform: translateY(300px)
+	100%
+		transform: translateY(300px)
 .title2_text1
 	animation: title2-1 $duration ease infinite
 .title2_text2
 	animation: title2-2 $duration ease infinite
+.title2_text3
+	animation: title2-3 $duration ease infinite
 
 @keyframes deadline
 	0%
-		transform: translateY(-100px)
-	60%
-		transform: translateY(-100px)
-	70%
+		transform: translateY(-300px)
+	50%
+		transform: translateY(-300px)
+	58%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
 	100%
-		transform: translateY(-100px)
-.deadline
-	animation: deadline $duration ease infinite
+		transform: translateY(-300px)
 
 @keyframes date
 	0%
-		transform: translateX(300px)
+		transform: translateX(-400px)
+	52%
+		transform: translateX(-400px)
 	60%
-		transform: translateX(300px)
-	70%
 		transform: translateX(0)
 	90%
 		transform: translateX(0)
 	100%
-		transform: translateX(-300px)
-.date
-	animation: date $duration ease infinite
+		transform: translateX(-400px)
 
 @keyframes button
 	0%
-		transform: translateX(-300px)
+		transform: translateY(300px)
+	50%
+		transform: translateY(300px)
 	60%
-		transform: translateX(-300px)
-	70%
-		transform: translateX(0)
+		transform: translateY(0)
 	90%
-		transform: translateX(0)
+		transform: translateY(0)
 	100%
-		transform: translateX(300px)
+		transform: translateY(300px)
+
+.deadline
+	animation: deadline $duration ease infinite
+.date
+	animation: date $duration ease infinite
 .button
 	animation: button $duration ease infinite
 
 @keyframes logos
 	0%
 		transform: translateY(300px)
-	65%
+	48%
 		transform: translateY(300px)
-	75%
+	58%
 		transform: translateY(0)
 	90%
 		transform: translateY(0)
@@ -317,27 +318,33 @@ body
 
 @keyframes world
 	0%
-		transform: translateY(0)
-		background-size: 64%
-		-webkit-background-size: 64%
+		transform: scale(1)
+		right: -51px
 	20%
-		transform: translateY(0)
-		background-size: 64%
-		-webkit-background-size: 64%
+		transform: scale(1)
+		right: -51px
 	30%
-		transform: translateY(151px)
-		background-size: 100%
-		-webkit-background-size: 100%
+		transform: scale(1.3)
+		right: -198px
 	90%
-		transform: translateY(151px)
-		background-size: 100%
-		-webkit-background-size: 100%
+		transform: scale(1.3)
+		right: -198px
 	100%
-		transform: translateY(0)
-		background-size: 64%
-		-webkit-background-size: 64%
-.world
+		transform: scale(1)
+		right: -51px
+@keyframes worldRotate
+	50%
+		transform: rotate(0deg)
+	60%
+		transform: rotate(48deg)
+	90%
+		transform: rotate(48deg)
+	100%
+		transform: rotate(0deg)
+.world-wrap
 	animation: world $duration ease infinite
+.world
+	animation: worldRotate $duration ease infinite
 
 
 
