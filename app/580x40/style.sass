@@ -1,0 +1,321 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #fcb01e
+$duration: 12s
+$width: 580px
+$height: 40px
+
+/********** Main Style **********/
+body
+	margin: 0
+	padding: 0
+*
+	box-sizing: border-box
+
+.banner
+	position: relative
+	display: block
+	width: $width
+	height: $height
+	overflow: hidden
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	background-color: $white
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialiased
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.wrapper
+	height: 100%
+	background: url("img/bg.jpg") no-repeat 50% 50%
+	font-family: 'Roboto Condensed', sans-serif
+	text-align: left
+	text-transform: uppercase
+
+.world-wrap
+	width: 540px
+	height: 540px
+	position: absolute
+	top: -201px
+	left: 173px
+	transform: rotate(20deg)
+.world
+	background: url("img/world.png") no-repeat center
+	width: 100%
+	height: 100%
+	transform: rotate(20deg)
+
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 0 0 0 31px
+	text-align: left
+	font-size: 31px
+	letter-spacing: -3px
+	line-height: 43px
+	color: $accent
+	span
+		color: $white
+
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 2px 0 0 13px
+	text-shadow: 4px 0 9px #030404
+	font-size: 32px
+	letter-spacing: -2.3px
+	line-height: 37px
+	&_text1
+		display: inline-block
+		color: $white
+	&_text2
+		display: inline-block
+		color: $accent
+
+.title3
+	text-shadow: 4px 0 9px #030404
+	font-size: 21px
+	letter-spacing: -1.5px
+	line-height: 24px
+	color: $accent
+	&_text1,
+	&_text2
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 9px 0 0 13px
+
+/********** Date **********/
+.deadline-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-left: 4px
+	text-shadow: 4px 0 9px #030404
+	text-align: left
+	.deadline
+		display: inline-block
+		vertical-align: middle
+		font-family: 'Roboto Condenced', sans-serif
+		font-size: 21px
+		letter-spacing: -2px
+		line-height: $height
+		color: $accent
+	.date
+		display: inline-block
+		vertical-align: middle
+		padding-left: 3px
+		font-size: 24px
+		line-height: $height
+		letter-spacing: -3px
+		color: $white
+
+/********** Logos **********/
+.logos
+	position: absolute
+	bottom: 0
+	right: 0
+	width: 158px
+	height: 100%
+	background-color: $white
+	text-align: left
+	padding: 9px 0 0 6px
+	img
+		display: inline-block
+		&.logo1
+			width: 53px
+		&.logo2
+			margin-left: 8px
+			width: 86px
+
+/********** Animation **********/
+@keyframes title1
+	0%
+		transform: translateX(0)
+	10%
+		transform: translateX(0)
+	18%
+		transform: translateX(-250px)
+	90%
+		transform: translateX(-250px)
+	100%
+		transform: translateX(0)
+.title1
+	animation: title1 $duration ease infinite
+
+@keyframes title2-1
+	0%
+		transform: translateY(-50px)
+	12%
+		transform: translateY(-50px)
+	18%
+		transform: translateY(0)
+	30%
+		transform: translateY(0)
+	37%
+		transform: translateY(50px)
+	100%
+		transform: translateY(50px)
+@keyframes title2-2
+	0%
+		transform: translateY(50px)
+	12%
+		transform: translateY(50px)
+	18%
+		transform: translateY(0)
+	30%
+		transform: translateY(0)
+	37%
+		transform: translateY(-50px)
+	100%
+		transform: translateY(-50px)
+.title2_text1
+	animation: title2-1 $duration ease infinite
+.title2_text2
+	animation: title2-2 $duration ease infinite
+
+@keyframes title3-1
+	0%
+		transform: translateY(50px)
+	32%
+		transform: translateY(50px)
+	39%
+		transform: translateY(0)
+	50%
+		transform: translateY(0)
+	57%
+		transform: translateY(-50px)
+	100%
+		transform: translateY(-50px)
+@keyframes title3-2
+	0%
+		transform: translateY(50px)
+	50%
+		transform: translateY(50px)
+	57%
+		transform: translateY(0)
+	70%
+		transform: translateY(0)
+	77%
+		transform: translateY(-50px)
+	100%
+		transform: translateY(-50px)
+.title3_text1
+	animation: title3-1 $duration ease infinite
+.title3_text2
+	animation: title3-2 $duration ease infinite
+
+@keyframes deadline
+	0%
+		transform: translateY(-100px)
+	70%
+		transform: translateY(-100px)
+	77%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(-100px)
+@keyframes date
+	0%
+		transform: translateY(100px)
+	70%
+		transform: translateY(100px)
+	77%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	100%
+		transform: translateY(100px)
+.deadline
+	animation: deadline $duration ease infinite
+.date
+	animation: date $duration ease infinite
+
+@keyframes logos
+	0%
+		right: -160px
+	50%
+		right: -160px
+	60%
+		right: 0
+	90%
+		right: 0
+	100%
+		right: -160px
+.logos
+	animation: logos $duration ease infinite
+
+@keyframes world
+	0%
+		transform: scale(0.75)
+		top: -201px
+		left: 173px
+	10%
+		transform: scale(0.75)
+		top: -201px
+		left: 173px
+	20%
+		transform: scale(0.75)
+		top: -40px
+		left: 470px
+	30%
+		transform: scale(0.75)
+		top: -40px
+		left: 470px
+	40%
+		transform: scale(0.62)
+		top: -231px
+		left: 264px
+	50%
+		transform: scale(0.62)
+		top: -231px
+		left: 264px
+	60%
+		transform: scale(0.62)
+		top: -231px
+		left: 148px
+	70%
+		transform: scale(0.62)
+		top: -231px
+		left: 148px
+	80%
+		transform: scale(0.62)
+		top: -231px
+		left: 297px
+	90%
+		transform: scale(0.62)
+		top: -231px
+		left: 297px
+	100%
+		transform: scale(0.75)
+		top: -201px
+		left: 173px
+.world-wrap
+	animation: world $duration ease infinite
+
+
+
+
+
+
+
+
+
